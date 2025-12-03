@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية أفق الإتقان</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #f2f7ff;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: #4a90e2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    nav {
+        text-align: center;
+        margin: 10px 0;
+    }
+    nav button {
+        margin: 0 5px;
+        padding: 10px 15px;
+        background: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    nav button:hover {
+        background: #e6f0ff;
+    }
+    section {
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+    h2 {
+        color: #4a90e2;
+    }
+    .package {
+        border: 2px solid #4a90e2;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 15px 0;
+        background: #e6f0ff;
+    }
+    .whatsapp-button {
+        display: inline-block;
+        background-color: #25D366;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .whatsapp-button:hover {
+        background-color: #1ebe57;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1 id="welcome-text">مرحبا بكم في أكاديمية أفق الإتقان</h1>
+    <p id="welcome-subtext">نحن ندرسك بأرخص سعر وبأفضل نوع. يوجد دراسة باللغة العربية و الفارسية ونقدم شهادة رسمية من السعودية.</p>
+    <p>تواصل عبر الهاتف: +64 22 348 8944 | البريد: ufuqalitqan@gmail.com</p>
+    <nav>
+        <button onclick="toggleLanguage()">تغيير اللغة</button>
+        <a class="whatsapp-button" href="https://wa.me/640223488944" target="_blank">واتساب للتواصل</a>
+    </nav>
+</header>
+
+<section id="packages">
+    <h2>الباقات</h2>
+
+    <div class="package">
+        <h3>الباقة الشهرية 1</h3>
+        <p>عدد الحصص الأسبوعية: حصتان (2)</p>
+        <p>المزايا:</p>
+        <ul>
+            <li>متابعة أسبوعية من المعلم</li>
+            <li>دراسة التجويد والحفظ حسب المستوى</li>
+            <li>شهادة رسمية من السعودية عند إتمام الدورة</li>
+        </ul>
+        <p>السعر: 30$ شهريا</p>
+    </div>
+
+    <div class="package">
+        <h3>الباقة الشهرية 2</h3>
+        <p>عدد الحصص الأسبوعية: أربع حصص (4)</p>
+        <p>المزايا:</p>
+        <ul>
+            <li>متابعة أسبوعية من المعلم</li>
+            <li>دراسة التجويد والحفظ حسب المستوى</li>
+            <li>شهادة رسمية من السعودية عند إتمام الدورة</li>
+        </ul>
+        <p>السعر: 40$ شهريا</p>
+    </div>
+
+    <div class="package">
+        <h3>الباقة الشهرية 3</h3>
+        <p>عدد الحصص الأسبوعية: 6 حصص</p>
+        <p>المزايا:</p>
+        <ul>
+            <li>متابعة أسبوعية من المعلم</li>
+            <li>دراسة التجويد والحفظ حسب المستوى</li>
+            <li>شهادة رسمية من السعودية عند إتمام الدورة</li>
+        </ul>
+        <p>السعر: 50$ شهريا</p>
+    </div>
+</section>
+
+<section id="courses">
+    <h2>الدروس والمواد التعليمية</h2>
+    <ul>
+        <li>التجويد</li>
+        <li>الحفظ</li>
+        <li>الكتابة والقراءة</li>
+    </ul>
+</section>
+
+<section id="news">
+    <h2>أخبار الأكاديمية</h2>
+    <p>تم صنع هذه الأكاديمية لتعليم القرآن الكريم وبأسعار أرخص، والشهادات الرسمية هي فرقة من أكاديميات أخرى لأنها نقدم التعليم بأرخص سعر.</p>
+</section>
+
+<section id="contact">
+    <h2>اتصل بنا</h2>
+    <p>الهاتف: +64 22 348 8944</p>
+    <p>البريد: ufuqalitqan@gmail.com</p>
+</section>
+
+<script>
+    let arabic = true;
+
+    function toggleLanguage() {
+        if(arabic) {
+            // الترجمة للفارسية
+            document.getElementById('welcome-text').innerText = 'به آکادمی افق الاتقان خوش آمدید';
+            document.getElementById('welcome-subtext').innerText = 'ما شما را با ارزان‌ترین قیمت و بهترین کیفیت آموزش می‌دهیم. آموزش به زبان عربی و فارسی موجود است و گواهینامه رسمی سعودی ارائه می‌کنیم.';
+            document.getElementById('packages').querySelector('h2').innerText = 'بسته‌ها';
+            document.querySelectorAll('.package')[0].querySelector('h3').innerText = 'بسته ماهانه 1';
+            document.querySelectorAll('.package')[1].querySelector('h3').innerText = 'بسته ماهانه 2';
+            document.querySelectorAll('.package')[2].querySelector('h3').innerText = 'بسته ماهانه 3';
+            document.getElementById('courses').querySelector('h2').innerText = 'دروس و مواد آموزشی';
+            document.getElementById('courses').querySelector('ul').innerHTML = '<li>تجوید</li><li>حفظ</li><li>نوشتن و خواندن</li>';
+            document.getElementById('news').querySelector('h2').innerText = 'اخبار آکادمی';
+            document.getElementById('news').querySelector('p').innerText = 'این آکادمی برای آموزش قرآن کریم و با ارزان‌ترین قیمت ساخته شده است. تفاوت ما با دیگر آکادمی‌ها ارائه آموزش با کمترین قیمت است.';
+            document.getElementById('contact').querySelector('h2').innerText = 'تماس با ما';
+            document.getElementById('contact').querySelectorAll('p')[0].innerText = 'تلفن: +64 22 348 8944';
+            document.getElementById('contact').querySelectorAll('p')[1].innerText = 'ایمیل: ufuqalitqan@gmail.com';
+            arabic = false;
+        } else {
+            // العودة للعربية
+            document.getElementById('welcome-text').innerText = 'مرحبا بكم في أكاديمية أفق الإتقان';
+            document.getElementById('welcome-subtext').innerText = 'نحن ندرسك بأرخص سعر وبأفضل نوع. يوجد دراسة باللغة العربية و الفارسية ونقدم شهادة رسمية من السعودية.';
+            document.getElementById('packages').querySelector('h2').innerText = 'الباقات';
+            document.querySelectorAll('.package')[0].querySelector('h3').innerText = 'الباقة الشهرية 1';
+            document.querySelectorAll('.package')[1].querySelector('h3').innerText = 'الباقة الشهرية 2';
+            document.querySelectorAll('.package')[2].querySelector('h3').innerText = 'الباقة الشهرية 3';
+            document.getElementById('courses').querySelector('h2').innerText = 'الدروس والمواد التعليمية';
+            document.getElementById('courses').querySelector('ul').innerHTML = '<li>التجويد</li><li>الحفظ</li><li>الكتابة والقراءة</li>';
+            document.getElementById('news').querySelector('h2').innerText = 'أخبار الأكاديمية';
+            document.getElementById('news').querySelector('p').innerText = 'تم صنع هذه الأكاديمية لتعليم القرآن الكريم وبأسعار أرخص، والشهادات الرسمية هي فرقة من أكاديميات أخرى لأنها نقدم التعليم بأرخص سعر.';
+            document.getElementById('contact').querySelector('h2').innerText = 'اتصل بنا';
+            document.getElementById('contact').querySelectorAll('p')[0].innerText = 'الهاتف: +64 22 348 8944';
+            document.getElementById('contact').querySelectorAll('p')[1].innerText = 'البريد: ufuqalitqan@gmail.com';
+            arabic = true;
+        }
+    }
+</script>
+
+</body>
+</html>
